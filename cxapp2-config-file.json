@@ -1,0 +1,42 @@
+{
+        "xapp_name": "cxapp2",
+        "version": "0.0.1",
+        "containers": [
+            {
+                "name": "cxapp2",
+                "image": {
+                    "registry": "xApp-registry.local:5008",
+                    "name": "cxapp2",
+                    "tag": "0.0.1"
+                }
+            }
+        ],
+        "messaging": {
+            "ports": [
+                {
+                    "name": "rmr-data",
+                    "container": "cxapp2",
+                    "port": 4560,
+                    "txMessages": ["mr_SENT_DATA"],
+                    "rxMessages": ["mr_ACK"],
+                    "policies": [],
+                    "description": "rmr receive data port for cxapp2"
+                },
+                {
+                    "name": "rmr-route",
+                    "container": "cxapp2",
+                    "port": 4561,
+                    "description": "rmr route port for cxapp2"
+                }
+            ]
+        },
+        "rmr": {
+            "protPort": "tcp:4560",
+            "maxSize": 2072,
+            "numWorkers": 1,
+            "rxMessages": ["mr_ACK"],
+            "txMessages": ["mr_SENT_DATA"],
+            "policies": []
+        }
+
+}

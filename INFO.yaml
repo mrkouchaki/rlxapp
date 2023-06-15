@@ -1,0 +1,48 @@
+---
+project: 'ric-app/cxapp2'
+project_creation_date: '2023-4-10'
+project_category: ''
+lifecycle_state: ''
+project_lead: &mrk
+    name: 'M Reza'
+    email: 'mk1682@msstate.edu'
+    id: 'mr'
+    company: 'mr'
+    timezone: 'America/New_York'
+primary_contact: *mr
+issue_tracking:
+    type: 'jira'
+    url: 'https://jira.o-ran-sc.org/'
+    key: 'mr'
+mailing_list:
+    type: 'groups.io'
+    url: 'https://lists.o-ran-sc.org/'
+    tag: '<[ric-app/mr]>'
+realtime_discussion:
+    type: 'irc'
+    server: 'nginx'
+    channel: '#o-ran-sc'
+meetings:
+    - type: 'zoom'
+      agenda: ''
+      url: ''
+      server: 'n/a'
+      channel: 'n/a'
+      repeats: 'weekly'
+      time: ''
+repositories:
+    - 'ric-app/mr'
+committers:
+    - <<: *oran_ric_app_mr
+    - name: 'mreza'
+      email: 'mrkouchaki@gmail.com'
+      company: 'MSU'
+      id: 'mk'
+      timezone: 'America/Los_Angeles'
+    - name: 'mreza'
+      email: ''
+      company: 'MSU'
+      id: 'mk'
+      timezone: 'America/Los_Angeles'
+tsc:
+    approval: 'https://lists.o-ran-sc.org/'
